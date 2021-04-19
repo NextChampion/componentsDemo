@@ -9,11 +9,12 @@ export default class HomeScreen extends PureComponent {
   };
 
   renderItem = ({item}) => {
-    const {name} = item || {};
+    const {name, finished} = item || {};
     return (
       <View style={styles.row}>
         <Text>组件名称:</Text>
         <Button title={name} onPress={() => this.onButtonPress(name)} />
+        {finished ? <Text>✅</Text> : null}
       </View>
     );
   };
