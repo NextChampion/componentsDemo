@@ -36,6 +36,22 @@ export default class ScrollViewScreen extends PureComponent {
             <Text>ScrollView</Text>
           </ScrollView>
         </View>
+        <View style={styles.scrollContainer}>
+          <ScrollView style={styles.scrollView1}>
+            <Text>ScrollView11</Text>
+            <View style={styles.flexView} />
+            <Text>ScrollView22</Text>
+          </ScrollView>
+        </View>
+        <View style={styles.scrollContainer}>
+          <ScrollView
+            style={styles.scrollView1}
+            contentContainerStyle={styles.content}>
+            <Text>ScrollView11</Text>
+            <View style={styles.flexView} />
+            <Text>ScrollView22</Text>
+          </ScrollView>
+        </View>
       </View>
     );
   }
@@ -48,15 +64,23 @@ const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: 'red',
     height: 100,
-    width: 300,
+    // width: 300,
   },
   scrollContainer: {
     height: 100,
-    width: 300,
+    borderWidth: 1,
+    // width: 300,
   },
   scrollView1: {
     backgroundColor: 'green',
     height: 100,
-    width: 300,
+    // width: 300,
+  },
+  flexView: {
+    flex: 1,
+    backgroundColor: 'blue',
+  },
+  content: {
+    flex: 1,
   },
 });
