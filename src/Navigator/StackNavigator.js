@@ -7,6 +7,7 @@ import TextInputScreen from '../Screens/TextInputScreen';
 import ScrollViewScreen from '../Screens/ScrollViewScreen';
 import SwitchScreen from '../Screens/SwitchScreen';
 import AlertScreen from '../Screens/AlertScreen';
+import ActivityIndicatorScreen from '../Screens/ActivityIndicatorScreen';
 const Stack = createStackNavigator();
 
 function StackNavigator() {
@@ -19,6 +20,10 @@ function StackNavigator() {
       <Stack.Screen name="ScrollView" component={ScrollViewScreen} />
       <Stack.Screen name="Switch" component={SwitchScreen} />
       <Stack.Screen name="Alert" component={AlertScreen} />
+      <Stack.Screen
+        name="ActivityIndicator"
+        component={ActivityIndicatorScreen}
+      />
     </Stack.Navigator>
   );
 }
